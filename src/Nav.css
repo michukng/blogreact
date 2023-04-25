@@ -1,0 +1,14 @@
+nav {
+    height: 3em;
+    background-color: rgba(0, 0, 0, 0.656);
+}
+
+nav > button {
+    cursor: pointer;
+    color: aliceblue;
+    background: none;
+    border: none;
+    height: 3em;
+    padding: 1em;
+    margin-left: 3em;
+}
