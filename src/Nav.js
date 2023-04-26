@@ -1,9 +1,11 @@
-import './Nav.css'
+import { useNavigate } from 'react-router-dom';
 
 const Nav = () => {
+    const navigate = useNavigate();
+
   return (
     <nav>
-      <button>
+      <button onClick={() => navigate('/')}>
         Strona główna
       </button>
       <button>
