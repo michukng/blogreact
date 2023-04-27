@@ -4,6 +4,7 @@ import { DataProvider } from './Context/DataContext';
 import Header from './Header';
 import Nav from './Nav';
 import Home from './Home';
+import PostPage from './PostPage';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Nav />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/posts/:id" element={<PostPage />} />
         </Routes>
       </DataProvider>
     </div>

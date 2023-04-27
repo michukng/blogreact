@@ -1,25 +1,21 @@
-import { useEffect, useContext } from 'react';
+import { useContext } from 'react';
 import DataContext from './Context/DataContext';
 
+
 const Home = () => {
+  const { posts, navigate } = useContext(DataContext);
 
-  const { posts, setPosts, API_URL } = useContext(DataContext);
 
-  useEffect(() => {
+  // const handleDelete = (id) => {
+  //   const listPosts = posts.filter((post) => post.id !== id);
+  //   setPosts(listPosts);
 
-    const fetchPosts = async () => {
-      try {
-        const response = await fetch(`${API_URL}/posts`);
-        const listPosts = await response.json();
-        setPosts(listPosts);
-      } catch (err) {
-        console.log(err)
-      }
-    }
+  //   const deleteOptions = {
+  //     method: 'DELETE'
+  //   };
+  //   const req
+  // }
 
-    fetchPosts();
-  }, [])
-  console.log(posts); 
   return (
     <main className="Home">
       <ul>
@@ -27,8 +23,9 @@ const Home = () => {
           <li key={post.id}>
             <h2 className='post-title'>{post.postTitle.length <= 10 ? post.postTitle : `${post.postTitle.slice(0,10)}...`}</h2>
             <p className='post-body'>{post.postBody.length <= 25 ? post.postBody : `${post.postBody.slice(0,25)}...`}</p>
-            <button className='btn-edit-post'>Edytuj Post</button>
-            <button className='btn-delete-post'>Usuń Post</button>
+            <button 
+            className='btn-edit-post'
+            onClick={() => navigate(`/posts/${post.id}`)}>Pokaż post</button>
           </li>
         )}
       </ul>

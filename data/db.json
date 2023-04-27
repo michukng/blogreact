@@ -1,20 +1,3 @@
 {
-    "posts":
-    [
-        {
-            "id": 1,
-            "postTitle": "Tytuł",
-            "postBody": "Body"
-        },
-        {
-            "id": 2,
-            "postTitle": "Tytuł2",
-            "postBody": "Body2"
-        },
-        {
-            "id": 3,
-            "postTitle": "Tytułtytułtytuł",
-            "postBody": "LOREMLOREMLOREMLOREMLOREMLOREMLOREMLOREMLOREM"
-        }
-    ]
+  "posts": []
 }
