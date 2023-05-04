@@ -89,9 +89,9 @@ li {
   z-index: 1;
   font-family: inherit;
   color: red;
- }
- 
- .btn-delete-post::before {
+}
+
+.btn-delete-post::before {
   content: '';
   width: 0;
   height: 300%;
@@ -103,17 +103,17 @@ li {
   transition: .5s ease;
   display: block;
   z-index: -1;
- }
- 
- .btn-delete-post:hover::before {
+}
+
+.btn-delete-post:hover::before {
   width: 105%;
- }
- 
- .btn-delete-post:hover {
+}
+
+.btn-delete-post:hover {
   color: #111;
- }
- 
- .btn-edit-post {
+}
+
+.btn-edit-post {
   cursor: pointer;
   padding: 0.8em 1.8em;
   border: 2px solid rgb(62, 105, 196);
@@ -128,9 +128,9 @@ li {
   font-family: inherit;
   color: rgb(62, 105, 196);
   opacity: 0.8;
- }
- 
- .btn-edit-post::before {
+}
+
+.btn-edit-post::before {
   content: '';
   width: 0;
   height: 300%;
@@ -142,13 +142,65 @@ li {
   transition: .5s ease;
   display: block;
   z-index: -1;
- }
- 
- .btn-edit-post:hover::before {
+}
+
+.btn-edit-post:hover::before {
   width: 105%;
- }
- 
- .btn-edit-post:hover {
+}
+
+.btn-edit-post:hover {
   color: #111;
- }
- 
+}
+
+/* POSTPAGE */
+
+.post-page {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-left: 3.25em;
+  margin-right: 3.25em;
+  margin-top: 1em;
+  border-bottom: 1px solid black;
+  padding-bottom: 1em;
+  width: 90vw;
+}
+
+.btn-container {
+  display: flex;
+}
+
+/* ADDPOST PAGE */
+
+.add-post-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.add-post-form input[type='text'] {
+  height: 3rem;
+  padding: 1em;
+  font-size: 1em;
+} 
+
+.add-post-form textarea {
+  height: 20rem;
+  width: 50rem;
+  padding: 1em;
+  font-size: 1em;
+  resize: none;
+}
+
+.add-post-form > label {
+  font-size: 2em;
+}
+
+.add-post-form > .postBody-label {
+  margin-top: 1em;
+}
+
+.add-post-form > .btn-edit-post {
+  margin-top: 1.5em;
+  width: 10em;
+}

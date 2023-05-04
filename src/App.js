@@ -5,6 +5,7 @@ import Header from './Header';
 import Nav from './Nav';
 import Home from './Home';
 import PostPage from './PostPage';
+import AddPost from './AddPost';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Nav />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="dodaj-post" element={<AddPost />} />
           <Route path="/posts/:id" element={<PostPage />} />
         </Routes>
       </DataProvider>

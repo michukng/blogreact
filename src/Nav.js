@@ -8,7 +8,7 @@ const Nav = () => {
       <button onClick={() => navigate('/')}>
         Strona główna
       </button>
-      <button>
+      <button onClick={() => navigate('/dodaj-post')}>
         Dodaj post
       </button>
     </nav>

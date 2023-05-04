@@ -5,17 +5,6 @@ import DataContext from './Context/DataContext';
 const Home = () => {
   const { posts, navigate } = useContext(DataContext);
 
-
-  // const handleDelete = (id) => {
-  //   const listPosts = posts.filter((post) => post.id !== id);
-  //   setPosts(listPosts);
-
-  //   const deleteOptions = {
-  //     method: 'DELETE'
-  //   };
-  //   const req
-  // }
-
   return (
     <main className="Home">
       <ul>

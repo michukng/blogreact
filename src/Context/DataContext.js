@@ -8,6 +8,8 @@ const DataContext = createContext({});
 export const DataProvider = ({ children }) => {
     const API_URL = 'http://localhost:3500'
     const [posts, setPosts] = useState([]);
+    const [postBody, setPostBody ] = useState("");
+    const [postTitle, setPostTitle ] = useState("");
     const navigate = useNavigate();
 
     const { data, fetchError, isLoading } = useAxiosFetch('http://localhost:3500/posts');
@@ -18,7 +20,9 @@ export const DataProvider = ({ children }) => {
 
     return (
         <DataContext.Provider value={{
-            posts, setPosts, API_URL, navigate
+            posts, setPosts, API_URL, navigate,
+            postBody, setPostBody,
+            postTitle, setPostTitle
         }}>
             {children}
             </DataContext.Provider>

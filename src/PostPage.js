@@ -21,15 +21,18 @@ const PostPage = () => {
 
 return (
     
-    <main>
-        { post && <>
+    <main className="post-page">
+        {post && <>
       <h2 className='post-title'>{post.postTitle}</h2>
             <p className='post-body'>{post.postBody}</p>
+            <div className="btn-container">
             <button className='btn-edit-post'>Edytuj Post</button>
             <button
             className='btn-delete-post'
             onClick={() => handleDelete(post.id)}
-            >Usuń Post</button></>}
+            >Usuń Post</button>
+            </div></>}
+            
     </main>
   )
 }
