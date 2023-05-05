@@ -26,7 +26,9 @@ return (
       <h2 className='post-title'>{post.postTitle}</h2>
             <p className='post-body'>{post.postBody}</p>
             <div className="btn-container">
-            <button className='btn-edit-post'>Edytuj Post</button>
+            <button
+                className='btn-edit-post'
+                onClick={() => navigate(`/edytuj-post/${post.id}`)}>Edytuj Post</button>
             <button
             className='btn-delete-post'
             onClick={() => handleDelete(post.id)}

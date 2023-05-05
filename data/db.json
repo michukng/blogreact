@@ -1,14 +1,14 @@
 {
   "posts": [
     {
-      "id": 4,
-      "postTitle": "długi tytuł jakiś",
-      "postBody": "Długa treść wiadomości jest."
-    },
-    {
       "id": 5,
       "postTitle": "Testowy tytuł",
       "postBody": "Testowa treść wiadomości"
+    },
+    {
+      "id": 6,
+      "postTitle": "Nowy tytuł",
+      "postBody": "Nowa treść wiadomości."
     }
   ]
 }

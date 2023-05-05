@@ -8,11 +8,15 @@ const DataContext = createContext({});
 export const DataProvider = ({ children }) => {
     const API_URL = 'http://localhost:3500'
     const [posts, setPosts] = useState([]);
-    const [postBody, setPostBody ] = useState("");
-    const [postTitle, setPostTitle ] = useState("");
+    const [postBody, setPostBody] = useState("");
+    const [postTitle, setPostTitle] = useState("");
+    const [editTitle, setEditTitle] = useState("");
+    const [editBody, setEditBody] = useState("");
+    const [emptyTitle, setEmptyTitle] = useState("empty-title-disabled");
+    const [emptyBody, setEmptyBody] = useState("empty-body-disabled");
     const navigate = useNavigate();
 
-    const { data, fetchError, isLoading } = useAxiosFetch('http://localhost:3500/posts');
+    const { data } = useAxiosFetch('http://localhost:3500/posts');
 
     useEffect(() => {
         setPosts(data)
@@ -22,7 +26,11 @@ export const DataProvider = ({ children }) => {
         <DataContext.Provider value={{
             posts, setPosts, API_URL, navigate,
             postBody, setPostBody,
-            postTitle, setPostTitle
+            postTitle, setPostTitle,
+            emptyTitle, setEmptyTitle,
+            emptyBody, setEmptyBody,
+            editTitle, setEditTitle,
+            editBody, setEditBody
         }}>
             {children}
             </DataContext.Provider>

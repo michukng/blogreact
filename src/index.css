@@ -171,7 +171,7 @@ li {
   display: flex;
 }
 
-/* ADDPOST PAGE */
+/* ADDPOST PAGE & EDITPOST PAGE*/
 
 .add-post-form {
   display: flex;
@@ -202,5 +202,13 @@ li {
 
 .add-post-form > .btn-edit-post {
   margin-top: 1.5em;
-  width: 10em;
+  width: 10.4em;
+}
+
+.empty-body-enabled, .empty-title-enabled {
+  color: red;
+}
+
+.empty-body-disabled, .empty-title-disabled {
+  display: none;
 }
