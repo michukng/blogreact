@@ -1,7 +1,9 @@
+import { Link } from "react-router-dom"
+
 const Header = () => {
-  return (
+    return (
     <header>
-      <h1>Blog</h1>
+      <h1><Link to='/'>Blog</Link></h1>
     </header>
   )
 }
