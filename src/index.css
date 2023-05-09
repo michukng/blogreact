@@ -46,13 +46,22 @@ nav > button {
   margin-left: 3em;
 }
 
+nav > input {
+  float: right;
+  height: 2em;
+  width: 30vw;
+  margin-top: 0.75em;
+  margin-right: 3em;
+  padding: 0.25em;
+}
+
 /* HOME */
 
 .Home {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  min-height: calc(100vh - 11rem);
+  min-height: calc(100vh - 11rem - 3em);
 }
 
 .Home > ul {
@@ -66,6 +75,10 @@ li {
   border-bottom: 1px solid black;
   padding-bottom: 1em;
   width: 90vw;
+}
+
+li:last-child {
+  border: none;
 }
 
 .post-title {
@@ -156,9 +169,16 @@ li {
   color: #111;
 }
 
+.missing-posts {
+  margin-left: 3.25em;
+  margin-right: 3.25em;
+  margin-top: 1em;
+}
+
 /* POSTPAGE */
 
 .post-page {
+  min-height: calc(100vh - 11rem - 4em);
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -166,7 +186,6 @@ li {
   margin-left: 3.25em;
   margin-right: 3.25em;
   margin-top: 1em;
-  border-bottom: 1px solid black;
   padding-bottom: 1em;
   width: 90vw;
 }
@@ -215,4 +234,16 @@ li {
 
 .empty-body-disabled, .empty-title-disabled {
   display: none;
+}
+
+/* FOOTER */
+
+footer {
+  background-color: rgb(62, 105, 196);
+  opacity: 0.8;
+  height: 3em;
+  display: grid;
+  place-items: center;
+  color: black;
+  font-weight: 600;
 }

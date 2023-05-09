@@ -14,6 +14,8 @@ export const DataProvider = ({ children }) => {
     const [editBody, setEditBody] = useState("");
     const [emptyTitle, setEmptyTitle] = useState("empty-title-disabled");
     const [emptyBody, setEmptyBody] = useState("empty-body-disabled");
+    const [searchPost, setSearchPost ] = useState("");
+    const [searchResult, setSearchResult] = useState([]);
     const navigate = useNavigate();
 
     const { data } = useAxiosFetch('http://localhost:3500/posts');
@@ -30,7 +32,9 @@ export const DataProvider = ({ children }) => {
             emptyTitle, setEmptyTitle,
             emptyBody, setEmptyBody,
             editTitle, setEditTitle,
-            editBody, setEditBody
+            editBody, setEditBody,
+            searchPost, setSearchPost,
+            searchResult, setSearchResult
         }}>
             {children}
             </DataContext.Provider>

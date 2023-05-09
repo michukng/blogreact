@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import DataContext from "./Context/DataContext";
 import { useContext } from "react";
 import api from './api/posts';
@@ -34,7 +34,7 @@ return (
             onClick={() => handleDelete(post.id)}
             >Usuń Post</button>
             </div></>}
-            
+        {!post && <p>Nie ma takiego postu! <Link to='/dodaj-post'>Dodaj post.</Link></p>}            
     </main>
   )
 }

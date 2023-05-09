@@ -1,14 +1,14 @@
 {
   "posts": [
     {
-      "id": 5,
-      "postTitle": "Testowy tytuł",
-      "postBody": "Testowa treść wiadomości"
+      "id": 1,
+      "postTitle": "Treść tytułu",
+      "postBody": "Treść wiadomości."
     },
     {
-      "id": 6,
-      "postTitle": "Nowy tytuł",
-      "postBody": "Nowa treść wiadomości."
+      "id": 2,
+      "postTitle": "Nowo dodany post",
+      "postBody": "Nowa treść wyświetlanej wiadomości."
     }
   ]
 }
